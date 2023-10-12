@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="styleguide.css">
+    <!-- <link rel="stylesheet" href="styles.css"> -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+        <div class="header">
+                <div class="main-flex">
+                <div class="main-head">
+                <nav class="navbar" >
+                        <div class="white white-2">
+                                    <a href="#" class="text-wrapper-7">Startup 3</a>
+                            </div>
+                        <ul class="nav-menu" style="text-align: center;">
+                                <li class="nav-item" id="overview-li"><a style="color: inherit;" href="#">Overview</a></li>
+                                <li class="nav-item"><a style="color: inherit;" href="#prices">Prices</a></li>
+                                <li class="nav-item"><a style="color: inherit;" href="#blog">Blog</a></li>
+                                <li class="nav-item"><a style="color: inherit;" href="#feedback">Feedback</a></li>
+                                <li class="middle-fill-3"><a class="sign-up-5" href="#purchace">Purchase</a></li>
+                            </ul>
+                        </nav>
+                        </div>
+                <div class="main-content">
+                 <div class="text">
+                        <div>
+                        <p class="twenty-five-awesome">Generate Awesome Web Pages</p>
+                            <p class="the-most-important-p">
+                                The most important part of the Startup is the samples. The samples form a set of 25 usable pages you can use
+                                as is or you can add new blocks.
+                            </p>
+                                <button type="button" class="middle-fill-2 l_txt">Learn More</button>
+                        </div>
+
+                 </div>
+                 <div class="sign-up-form">
+                        <div class="overlap-group">
+                                <div class="sign-up-3">Sign Up Now</div>
+                                <input class="div-wrapper" type="email" placeholder="Your email">
+                                <input class="middle-dark-outline" type="password" placeholder="Your password">
+                                <div class="checkbox-checked">
+                                    <input type="checkbox" checked="checked" class="on">
+                                    <label class="control control--checkbox mb-0 check_agree">
+                                        I agree to the Terms of Service.
+                                    </label>
+                                </div>
+                                
+                                
+                                <button class="sign-up-wrapper"><span class="sign-up-2">Sign In</span></button>    
+                                <button class="middle-fill"><span class="sign-up">Login via Twitter</span> </button>
+                                
+                                <div class="divider-or">
+                                    <div class="divider1"></div>
+                                    <p class="text-wrapper-2">or</p>
+                                    <div class="divider2"></div>
+                                </div>
+                                <p class="do-you-have-an-accou">Do you have an Account?</p>
+                                <h2 class="text-wrapper"><a href="your-sign-in-link" style="color: inherit;">Sign In</a></h2>
+                            </div>
+                 </div>
+                </div>
+                </div>
+
+        </div>
+      
+
+        
+
+            <script>
+                document.addEventListener("DOMContentLoaded", function() {
+                   
+                    let overviewLi = document.getElementById("overview-li");
+            
+                   
+                    overviewLi.firstElementChild.style.opacity = "0.3";
+            
+                    
+                    var listItems = document.querySelectorAll('li.nav-item a');
+                    listItems.forEach(function(item) {
+                
+                        item.addEventListener('click', function(event) {
+                            event.preventDefault();
+                            listItems.forEach(function(item) {
+                                item.style.opacity = "1";
+                            });
+                            this.style.opacity = "0.3";
+
+
+                            window.location.hash = this.getAttribute('href').substring(1);
+                        });
+                    });
+                });
+            </script>
+            
+            
+            
+
+</body>
+</html>
